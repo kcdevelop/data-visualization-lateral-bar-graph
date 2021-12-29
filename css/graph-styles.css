@@ -1,0 +1,174 @@
+.scale,
+.bar-graph,
+.graph-bars {
+    display: flex;
+}
+.scale,
+section,
+.graph-title,
+.graph-bars,
+.bar-graph > article {
+    box-sizing: border-box;
+    width: 100%;
+}
+section,
+.data-bar {
+    position: relative;
+}
+.scale,
+.graph-title,
+.data-bar div,
+.data-bar span,
+.graph-frame .border {
+    position: absolute;
+}
+.scale,
+.bar-graph {
+    bottom: 0px;
+}
+section,
+.graph-title,
+.graph-frame .border {
+    opacity: 0;
+}
+.data-bar,
+.graph-title {
+    font-family: arial;
+}
+section {
+    animation: openGraph 1000ms ease-in forwards;
+    border-radius: 8px;
+    max-width: 480px;
+    height: 440px;
+}
+@keyframes openGraph {
+    from {
+       max-width: 0px;
+       height: 0px;
+    }
+    to {
+        max-width: 480px;
+        opacity: 1;
+    }
+}
+.graph-frame .border {
+    animation: graphBorderZoom 1000ms 1500ms forwards;
+    width: 8vmax;
+    height: 8vmax;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 48px;
+    max-height: 48px;
+    z-index: 2000;
+}
+@keyframes graphBorderZoom {
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+.graph-frame .upper-left-border, 
+.graph-frame .upper-right-border {
+    border-top: 2px solid #000;
+    top: 0px;
+}
+.graph-frame .bottom-left-border, 
+.graph-frame .bottom-right-border {
+    border-bottom: 2px solid #000;
+    bottom: 0px;
+}
+.graph-frame .upper-left-border,
+.graph-frame .bottom-left-border {
+    border-left: 2px solid #000;
+    left: 0px;
+}
+.graph-frame .upper-right-border,
+.graph-frame .bottom-right-border{
+    border-right: 2px solid #000;
+    right: 0px;
+}
+.graph-frame .upper-left-border,
+.graph-frame .bottom-right-border {
+    border-radius: 8px 0px;
+}
+.graph-frame .upper-right-border,
+.graph-frame .bottom-left-border {
+    border-radius: 0px 8px;
+}
+.graph-frame .upper-left-border {
+    transform: translate(41px, 40px);
+}
+.graph-frame .upper-right-border {
+    transform: translate(-41px, 40px);
+}
+.graph-frame .bottom-left-border {
+    transform: translate(41px, -49px);
+}
+.graph-frame .bottom-right-border {
+    transform: translate(-41px, -49px);
+}
+.bar-graph {
+    background-color: rgba(227,191,0,1);
+    transform: translate(-50%, -50%);
+    border: 2px solid #b19812;
+    align-items: center;
+    padding: 18px 11px;
+    width: 82%;
+    height: 79%;
+    top: 49%; 
+    left: 50%;
+}
+.graph-title {
+    animation: graphHeading 1000ms 2000ms forwards;
+    text-align: center;
+    font-size: 17px;
+    top: 0px;
+}
+@keyframes graphHeading {
+    to {
+        top: -45px;
+         opacity: 1;
+    }
+}
+.scale {
+    justify-content: space-between;
+    padding: 0px 11px;
+    bottom: 5px;
+    width: 100%;
+    left: 0px;
+}
+.data-bar {
+    box-shadow: 0px 0px 15px rgba(227,191,0,1) inset;
+    background: no-repeat center center white;
+    background-size: contain;
+    margin: 11px 0px;
+    font-size: 11px;
+    height: 40px;
+}
+.scale div:first-child,
+.data-bar span:first-child {
+    border-left: 1px solid #000;
+    padding-left: 3px;
+}
+.scale div:last-child,
+.data-bar span:last-child {
+    border-right: 1px solid #000;
+    padding-right: 2px;
+}
+.graph-bars {
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.data-bar span {
+    font-style: normal;
+    font-weight: bold;
+    color: #000;
+    top: -13px;
+}
+.data-bar span:first-child {
+    left: 0px;
+}
+.data-bar span:last-child {
+    right: 0px;
+}

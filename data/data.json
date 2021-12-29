@@ -1,0 +1,47 @@
+{
+    "dataSet": [
+        {
+            "title": "Hearing Frequency Ranges"
+        },
+        { 
+            "rangeStart": "75Hz", 
+            "rangeEnd": "150000Hz", 
+            "barPercent": 150, 
+            "unit": "%", 
+            "color": "white", 
+            "background": "../images/sm/whale.png"
+        },
+        { 
+            "rangeStart": "45Hz", 
+            "rangeEnd": "64000Hz", 
+            "barPercent": 64, 
+            "unit": "%", 
+            "color": "white", 
+            "background": "../images/sm/cat.png"
+        },
+        { 
+            "rangeStart": "67Hz", 
+            "rangeEnd": "45000Hz", 
+            "barPercent": 45, 
+            "unit": "%", 
+            "color": "white", 
+            "background": "../images/sm/dog.png"
+        },
+        { 
+            "rangeStart": "64Hz", 
+            "rangeEnd": "23000Hz", 
+            "barPercent": 35, 
+            "unit": "%", 
+            "color": "white", 
+            "background": "../images/sm/human.png"
+        },
+        { 
+            "rangeStart": "15Hz", 
+            "rangeEnd": "12000Hz", 
+            "barPercent": 28, 
+            "unit": "%", 
+            "color": "white", 
+            "background": "../images/sm/elephant.png"
+        }
+    ]
+}
